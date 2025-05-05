@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"users/services"
+	services "github.com/phankieuphu/ecom-user/services"
 
 	"github.com/gin-gonic/gin"
 )

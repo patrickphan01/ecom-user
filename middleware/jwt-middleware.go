@@ -4,7 +4,8 @@ import (
 	"context"
 	"net/http"
 	"strings"
-	"users/config"
+
+	config "github.com/phankieuphu/ecom-user/config"
 
 	"github.com/golang-jwt/jwt/v5"
 )
