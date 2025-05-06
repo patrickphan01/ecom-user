@@ -3,7 +3,8 @@ package services
 import (
 	"fmt"
 	"log"
-	"users/config"
+
+	config "github.com/phankieuphu/ecom-user/config"
 
 	"github.com/confluentinc/confluent-kafka-go/v2/kafka"
 )

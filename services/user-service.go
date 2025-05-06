@@ -8,8 +8,9 @@ import (
 	"net/http"
 	"sync"
 	"time"
-	"users/config"
-	"users/models"
+
+	"github.com/phankieuphu/ecom-user/config"
+	"github.com/phankieuphu/ecom-user/models"
 
 	"github.com/gin-gonic/gin"
 )
@@ -126,4 +127,14 @@ func cacheUser(ctx context.Context, u *models.User) error {
 
 		}
 	}
+}
+
+type UserService struct {
+	UnimplementedUserServer
+}
+
+func (s *UserService) GetProfileUser(ctx context.Context, req *GetProfileUserRequest) (*GetProfileUserResponse, error) {
+	return &GetProfileUserResponse{
+		Message: "Hello " + req.GetName(),
+	}, nil
 }
