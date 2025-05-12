@@ -15,7 +15,8 @@ This microservice is dedicated to managing user-related functionalities within t
 * **User Management**: Handles user registration, authentication, and profile management.
 * **Middleware Integration**: Incorporates middleware for logging, authentication, and request validation.
 * **Modular Architecture**: Structured into clear modules: `config`, `logger`, `middleware`, `models`, `routes`, and `services`.
-* **RESTful API**: Exposes endpoints for user operations, adhering to REST principles.
+* **gRPC API**: Exposes endpoints for user operations, adhering to REST principles.
+
 
 ---
 
@@ -25,7 +26,8 @@ This microservice is dedicated to managing user-related functionalities within t
 * **Frameworks/Libraries**: Standard Go libraries; potential use of third-party packages for routing and middleware.
 * **Database**: Not specified; assumed to interface with a user data store.
 * **Logging**: Custom logger module for structured logging.([GitHub][2], [IONOS][3])
-
+*  **Build**: 
+   [buf](https://buf.build/)
 ---
 
 ## 📁 Project Structure
