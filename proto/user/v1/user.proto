@@ -3,18 +3,18 @@ syntax = "proto3";
 package services;
 
 option go_package = "/services;services";
-import "google/protobuf/wrappers.proto";
 
 service User {
   rpc GetProfileUser (GetProfileUserRequest) returns (GetProfileUserResponse);
   rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
 }
 
-message User {
+message UserModels {
   string Username = 1 [json_name="username"];
   string Email = 2 [json_name="email"];
-  string google.protobuf.StringValue Address = 3 [json_name = "address"];
+  string  Address = 3 [json_name = "address"];
   string PhoneNumber = 4 [json_name="phone_number"];
+  string Password = 5 [json_name="password"];
 //  string google.protobuf.StringValue DisplayName = 5 [json_name=""]
 }
 
@@ -27,7 +27,7 @@ message GetProfileUserResponse {
 }
 
 message RegisterUserRequest {
-  User user = 1;
+  UserModels user = 1;
 }
 
 message RegisterUserResponse {
